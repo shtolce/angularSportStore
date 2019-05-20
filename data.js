@@ -21,7 +21,7 @@ module.exports = function () {
         description: "A fun game for the family", price: 75 },
       { id: 9, name: "Bling Bling King", category: "Chess",
 
-        137
+
         description: "Gold-plated, diamond-studded King", price: 1200 }
 ],
   orders: []
