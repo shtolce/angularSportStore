@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreModule } from './store/store.module';
 import {StoreComponent} from "./store/store.component";
-import {CheckoutComponent} from "./store/checkout.component";
+import {CheckOutComponent} from "./store/checkout.component";
 import {CartDetailComponent} from "./store/cartDetail.component";
 import {RouterModule} from "@angular/router";
 import {StoreFirstGuard} from "./storeFirst.guard";
@@ -20,7 +20,7 @@ import {StoreFirstGuard} from "./storeFirst.guard";
     RouterModule.forRoot([
        {path:'store',component:StoreComponent,canActivate:[StoreFirstGuard]}
       ,{path:'cart',component:CartDetailComponent,canActivate:[StoreFirstGuard]}
-      ,{path:'checkout',component:CheckoutComponent,canActivate:[StoreFirstGuard]}
+      ,{path:'checkout',component:CheckOutComponent,canActivate:[StoreFirstGuard]}
       ,{path:'**',redirectTo:"/store"}
       ])
   ],
