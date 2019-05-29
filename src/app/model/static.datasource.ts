@@ -26,6 +26,7 @@ export class StaticDataSource {
     return Observable.from([this.products]);
   }
   saveOrder(order:Order):Observable<Order>{
+    console.log(JSON.stringify(order));
     return Observable.from([order]);
   }
 

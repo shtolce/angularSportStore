@@ -14,6 +14,15 @@ export class Cart {
     }
     this.recalculate();
   }
+
+  updateQuantity(product: Product, quantity: number) {
+    let line = this.lines.find(line => line.product.id == product.id);
+    if (line != undefined) {
+      line.quantity = Number(quantity);
+    }
+    this.recalculate();
+  }
+
   removeLine(id: number) {
     let index = this.lines.findIndex(line => line.product.id == id);
     this.lines.splice(index);
