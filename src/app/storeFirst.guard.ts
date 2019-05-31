@@ -10,12 +10,11 @@ export class StoreFirstGuard{
     if (this.firstNavigation) {
       this.firstNavigation = false;
       if (route.component != StoreComponent) {
-        this.router.navigateByUrl("/");
+        //this.router.navigateByUrl("/");
         return false;
       }
     }
     return true;
   }
-
 
 }
