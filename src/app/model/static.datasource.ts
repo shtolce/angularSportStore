@@ -5,6 +5,7 @@ import 'rxjs/add/observable/from';
 import {Order} from "./order.model";
 @Injectable()
 export class StaticDataSource {
+
   private products: Product[] = [
     new Product(1, 'Product 1', 'Category 1', 'Product 1 (Category 1)', 100),
     new Product(2, 'Product 2', 'Category 1', 'Product 2 (Category 1)', 100),

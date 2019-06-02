@@ -9,6 +9,8 @@ module.exports = function (req, res, next) {
     if (req.body != null && req.body.name == USERNAME
       && req.body.password == PASSWORD) {
       let token = jwt.sign({ data: USERNAME, expiresIn: "1h" }, APP_SECRET);
+      console.log(token);
+
       res.json({ success: true, token: token });
     } else {
       res.json({ success: false });
@@ -30,5 +32,6 @@ module.exports = function (req, res, next) {
     res.end();
     return;
   }
+
   next();
 }
